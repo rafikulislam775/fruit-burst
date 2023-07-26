@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fruit Burst</title>
-    <link
-      rel="shortcut icon"
-      href="./images/business.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
       rel="stylesheet"
@@ -16,9 +12,19 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- google font style -->
-    <style></style>
+    <style>
+      .font-lato {
+        font-family: "Lato", sans-serif;
+      }
+    </style>
     <!-- style customize -->
     <script>
       tailwind.config = {
@@ -31,10 +37,89 @@
         },
       };
     </script>
+    <!-- font-awesome cdn adding -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body>
+  <body class="font-lato">
     <!-- header section -->
-    <header></header>
+    <header class="max-w-7xl m-auto">
+      <!-- nav section -->
+      <nav class="my-12">
+        <div
+          class="navbar px-12 py-8 rounded-full lg:bg-[#F85559] lg:text-white"
+        >
+          <!-- Left section of the navbar - Shown on lg and larger, hidden on smaller -->
+          <div class="navbar-start hidden lg:flex">
+            <ul class="flex space-x-4 font-medium font-lato">
+              <li><a>Home</a></li>
+              <li><a>About Us</a></li>
+              <li><a>Shop</a></li>
+              <li><a>All Fruits</a></li>
+            </ul>
+          </div>
+
+          <!-- Center section of the navbar -->
+          <div class="navbar-center flex items-center">
+            <img class="h-12 mr-3" src="./images/logo.png" alt="" />
+            <a class="font-bold normal-case text-4xl">Fruit Burst</a>
+          </div>
+
+          <!-- Right section of the navbar -->
+
+          <div class="navbar-end">
+            <div class="relative">
+              <input
+                type="search"
+                placeholder="Search here"
+                class="input input-bordered w-full pr-10"
+              />
+              <span
+                class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none"
+              >
+                <i class="fas fa-search text-gray-400"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- Mobile dropdown - Shown on lg:hidden, hidden on larger screens -->
+          <div class="lg:hidden navbar-end">
+            <div class="dropdown">
+              <label tabindex="0" class="btn btn-ghost">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-black"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </label>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 font-medium font-lato rounded-box w-52"
+              >
+                <li><a>Home</a></li>
+                <li><a>About Us</a></li>
+                <li><a>Shop</a></li>
+                <li><a>All Fruits</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
     <!-- main section -->
     <main></main>
     <!-- footer section -->
